@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="el">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Διάβασε και τσέκαρε</title>
+
+    </head>
+  
+    <body style = "background-color:white;">
+
+        <header>
+        <h1 id="demo" style="text-align: center;" >Μαθήματα Πανελληνίων 2025<pre>ΟΜΑΔΑ ΠΡΟΣΑΝΑΤΟΛΙΣΜΟΥ ΘΕΤΙΚΩΝ ΣΠΟΥΔΩΝ</h1>
+        </header>    
+            <form>
+                <label>
+                <label for ="date"><b>Ημερομηνία Εξέτασης : </b></label>
+                <input type = "date" id="date" name="Ημερομηνία εξέτασης">
+            </form>
+
+            <script>
+                function myF() {
+                    document.getElementById("demo").style.color="lightblue"
+                    document.getElementById("demo").style.backgroundColor="grey"
+                }
+                 window.onload = function() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = localStorage.getItem(checkbox.name) === 'true';
+                checkbox.addEventListener('change', () => {
+                    localStorage.setItem(checkbox.name, checkbox.checked);
+                });
+            });
+        };
+
+                 window.onload = function() {
+            const dateInput = document.getElementById("date");
+            const savedDate = localStorage.getItem("examDate");
+            if (savedDate) {
+                dateInput.value = savedDate; 
+            }
+
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = localStorage.getItem(checkbox.name) === 'true';
+                checkbox.addEventListener('change', () => {
+                    localStorage.setItem(checkbox.name, checkbox.checked);
+                });
+            });
+
+            dateInput.addEventListener('change', () => {
+                localStorage.setItem("examDate", dateInput.value);
+            });
+        };
+            </script>
+         
+        <br>
+            <button type="button" onclick="myF()">Click Me</button>
+    <main> 
+        <hr>
+        <h2 style="color:rgb(44, 124, 151);">Μαθηματικά</h2>
+        <hr>
+        <details>
+            <summary>Αναλυτικότερα:</summary>
+            <pre>   
+         <p><b><mark>Κεφάλαιο 1</mark>: ΟΡΙΟ - ΣΥΝΕΧΕΙΑ ΣΥΝΑΡΤΗΣΗΣ</b>
+            <form>
+            <label>
+            <input type="checkbox" name="option1" value="value1">1.1. Πραγματικοί αριθμοί.</label>
+            <label>
+            <input type="checkbox" name="option2" value="value2">1.2. Συναρτήσεις.</label>
+            <label>
+            <input type="checkbox" name="option3" value="value3">1.3. Μονότονες συναρτήσεις - Αντίστροφη συνάρτηση.</label>
+            <label>
+            <input type="checkbox" name="option4" value="value4">1.4. Όριο συνάρτησης στο Χο.</label>
+            <label>
+            <input type="checkbox" name="option5" value="value5">1.5. Ιδιότητες των ορίων, χωρίς τις αποδείξεις της υποπαραγράφου "Τριγωνομετρικά όρια".</label>
+            <label>
+            <input type="checkbox" name="option6" value="value6">1.6. Μη πεπερασμένο όριο στο Χο.</label>
+            <label>
+            <input type="checkbox" name="option7" value="value7">1.7. Όρια συνάρτησης στο άπειρο.</label>
+            <label>
+            <input type="checkbox" name="option8" value="value8">1.8. Συνέχεια συνάρτησης.</label>
+            </form>
+        </p>
+        <p> <b><mark>Κεφάλαιο 2</mark>: ΔΙΑΦΟΡΙΚΟΣ ΛΟΓΙΣΜΟΣ</b>
+            <form>
+            <label>
+        <input type="checkbox" name="option9" value="value8">2.1. Η έννοια της παραγώγου, χωρίς την υποπαράγραφο "Κατακόρυφη εφαπτομένη".</label>
+            <label>
+        <input type="checkbox" name="option9" value="value9">2.2. Παραγωγίσιμες συναρτήσεις- Παράγωγος συνάρτηση. </label>
+            <label>
+        <input type="checkbox" name="option10" value="value10">2.3. Κανόνες παραγώγισης, χωρίς την απόδειξη του θεωρήματος που αναφέρεται στην παράγωγο γινομένου συναρτήσεων.</label>
+             <label>
+        <input type="checkbox" name="option11" value="value11">2.4. Ρυθμός μεταβολής.</label>
+            <label>
+        <input type="checkbox" name="option12" value="value12">2.5. Θεώρημα Μέσης Τιμής Διαφορικού Λογισμού.</label>            
+            <label>
+        <input type="checkbox" name="option13" value="value13">2.6. Συνέπειες του Θεωρήματος Μέσης Τιμής.</label>           
+            <label>
+        <input type="checkbox" name="option14" value="value14">2.7. Τοπικά ακρότατα συνάρτησης.</label>           
+            <label>
+        <input type="checkbox" name="option15" value="value15">2.8. Κυρτότητα - Σημεία καμπής συνάρτησης.</label>       
+            <label>
+        <input type="checkbox" name="option16" value="value16">2.9. Ασύμπτωτες - Κανόνες De l’ Hospital.</label>
+            <label>
+        <input type="checkbox" name="option17" value="value17">2.10. Μελέτη και χάραξη της γραφικής παράστασης μιας συνάρτησης.</label>
+        </form>
+            </p> 
+        <p><b><mark>Κεφάλαιο 3</mark>: ΟΛΟΚΛΗΡΩΤΙΚΟΣ ΛΟΓΙΣΜΟΣ</b>
+            <form>
+                <label>
+            <input type="checkbox" name="option18" value="value18">3.1. Αόριστο ολοκλήρωμα.</label>
+                <label>
+            <input type="checkbox" name="option19" value="value19"> 3.4. Ορισμένο ολοκλήρωμα.</label>
+                <label>
+            <input type="checkbox" name="option20" value="value20">3.5. Η συνάρτηση.</label>
+        </form>
+                </p>
+            </details>
+        <hr>
+        <h3 style="color:rgb(44, 124, 151);">Φυσική</h3>
+        <hr>
+        <details>
+            <summary>Αναλυτικότερα:</summary>
+             <pre>
+            
+        &rarr; <mark><ins>Γ' τεύχος</ins></mark>
+
+        <p><b><mark>Κεφάλαιο 5</mark>: ΚΡΟΥΣΕΙΣ ΚΑΙ ΣΧΕΤΙΚΕΣ ΚΙΝΗΣΕΙΣ</b>
+            <form>
+               <label>
+            <input type="checkbox" name="option21" value="value21">5.2. Κρούσεις. </label>   
+               <label>
+            <input type="checkbox" name="option22" value="value22">5.3. Κεντρική ελαστική κρούση δύο σφαιρών.</label>
+               <label>
+            <input type="checkbox" name="option23" value="value23">5.4. Ελαστική κρούση σώματος με άλλο ακίνητο πολύ μεγάλης μάζας.</label>
+        </form></p>
+        <p><b><mark>Κεφάλαιο 4</mark>: ΜΗΧΑΝΙΚΗ ΣΤΕΡΕΟΥ ΣΩΜΑΤΟΣ</b>
+        <form>
+               <label>
+            <input type="checkbox" name="option24" value="value24">4.1. Εισαγωγή.</label>
+               <label>
+            <input type="checkbox" name="option25" value="value25">4.2. Οι κινήσεις των στερεών σωμάτων.</label>          
+               <label>
+            <input type="checkbox" name="option26" value="value26">4.3. Ροπή δύναμης.</label>            
+               <label>
+            <input type="checkbox" name="option27" value="value27">4.4. Ισορροπία στερεού σώματος.</label>            
+               <label>
+            <input type="checkbox" name="option28" value="value28"> 4.7. Στροφορμή.</label>           
+               <label>
+            <input type="checkbox" name="option29" value="value29">4.8. Διατήρηση της Στροφορμής.</label> 
+        </form></p>   
+        <p><b><mark>Κεφάλαιο 1</mark>: ΗΛΕΚΤΡΙΚΕΣ-ΜΗΧΑΝΙΚΕΣ ΤΑΛΑΝΤΩΣΕΙΣ</b>
+        <form>
+                <label>
+            <input type="checkbox" name="option30" value="value30">1.2. Περιοδικά φαινόμενα.</label>
+                <label>
+            <input type="checkbox" name="option31" value="value31">1.3. Απλή αρμονική ταλάντωση.</label>
+                <label>
+            <input type="checkbox" name="option32" value="value32">1.5. Φθίνουσες ταλαντώσεις. </label>
+                <label>
+            <input type="checkbox" name="option33" value="value33">1.6. Εξαναγκασμένες ταλαντώσεις.</label>
+        </form>
+
+        <pre>
+        <p><b><mark>Κεφάλιο 2</mark>: ΚΥΜΑΤΑ</b>
+        <form>
+               <label>
+            <input type="checkbox" name="option34" value="value34">2.2. Μηχανικά κύματα.</label>
+               <label>
+            <input type="checkbox" name="option35" value="value35">2.3. Επαλληλία η Υπέρθεση κυμάτων.</label>
+               <label>
+            <input type="checkbox" name="option36" value="value36">2.4. Συμβολή δύο κυμάτων στην επιφάνεια υγρού.</label>
+               <label>
+            <input type="checkbox" name="option37" value="value37">2.5. Στάσιμα Κύματα.</label>
+        </form></p>
+
+
+        &rarr; <mark><ins>Β' τεύχος</ins></mark>
+        <p><b><mark>Κεφάλαιο 4</mark>: ΜΑΓΝΗΤΙΚΟ ΠΕΔΙΟ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option38" value="value38">4.1. Εισαγωγή.</label>
+                <label>
+            <input type="checkbox" name="option39" value="value39">4.2. Νόμος των Biot και Savart.</label>
+                <label>
+            <input type="checkbox" name="option40" value="value40">4.3. Εφαρμογές του νόμου των Biot και Savart.</label>
+                <label>
+            <input type="checkbox" name="option41" value="value41">4.4. Ο Νόμος του Ampere.</label>
+                <label>
+            <input type="checkbox" name="option42" value="value42">4.5. Μαγνητική ροή.</label>
+                <label>
+            <input type="checkbox" name="option43" value="value43">4.7. Δύναμη που ασκεί το μαγνητικό πεδίο σε κινούμενο φορτίο.</label>
+                <label>
+            <input type="checkbox" name="option44" value="value44">4.8. Κίνηση φορτισμένων σωματιδίων μέσα σε μαγνητικό πεδίο. </label>
+                <label>
+            <input type="checkbox" name="option45" value="value45">4.9. Εφαρμογές της κίνησης φορτισμένων σωματιδίων.</label>
+                <label>
+            <input type="checkbox" name="option46" value="value46">4.10. Δύναμη Laρlace. </label>>
+             <label>
+            <input type="checkbox" name="option47" value="value47">4.11. Μαγνητική δύναμη ανάμεσα σε δύο παράλληλους ρευματοφόρους αγωγούς.</label>
+        </form></p>
+        <p><b><mark>Κεφάλαιο 5</mark>: ΗΛΕΚΤΡΟΜΑΓΝΗΤΙΚΗ ΕΠΑΓΩΓΗ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option48" value="value48">5.1. Εισαγωγή.</label>
+                <label>
+            <input type="checkbox" name="option49" value="value49">5.2. Ηλεκτρομαγνητική επαγωγή.</label>
+                <label>
+            <input type="checkbox" name="option50" value="value50">5.3. Ευθύγραμμος αγωγός κινούμενος σε ομογενές μαγνητικό πεδίο.</label>
+                <label>
+            <input type="checkbox" name="option51" value="value51">5.4. Ο κανόνας του Lenz και η αρχή διατήρησης της ενέργειας στο φαινόμενο της επαγωγής.</label>
+                <label>
+            <input type="checkbox" name="option52" value="value52">5.5. Στρεφόμενος αγωγός.</label>
+                <label>
+            <input type="checkbox" name="option53" value="value53">5.6. Στρεφόμενο πλαίσιο - εναλλασσόμενη τάση.</label>
+                <label>
+            <input type="checkbox" name="option54" value="value54">5.7. Εναλλασσόμενο ρεύμα.</label>
+                <label>
+            <input type="checkbox" name="option55" value="value55">5.8. Ενεργός ένταση - Ενεργός τάση.</label>
+                <label>
+            <input type="checkbox" name="option56" value="value56">5.9. Ο νόμος του Joυle (Τζάουλ) - Ισχύς του εναλλασσόμενου ρεύματος.</label>
+                <label>
+            <input type="checkbox" name="option57" value="value57">5.14. Αυτεπαγωγή.</label>
+        </form></p>
+
+
+        &rarr; <mark><ins>Γ' τεύχος</ins></mark>
+        <p><b><mark>Κεφάλαιο 2</mark>: ΚΎΜΑΤΑ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option58" value="value58">2.6. Παραγωγή Ηλεκτρομαγνητικών κυμάτων.</label>
+                <label>
+            <input type="checkbox" name="option59" value="value59">2.8. Το Φάσμα Της Ηλεκτρομαγνητικής Ακτινοβολίας.</label>
+        </form></p>
+        <p><b><mark>Κεφάλαιο 7</mark>: ΣΤΟΙΧΕΙΑ ΚΒΑΝΤΟΜΗΧΑΝΙΚΗΣ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option60" value="value60">7.1. Εισαγωγή.</label>
+                <label>
+            <input type="checkbox" name="option61" value="value61">7.2. Η ακτινοβολία του μέλανος σώματος.</label>
+                <label>
+            <input type="checkbox" name="option62" value="value62">7.3 Το φωτοηλεκτρικό φαινόμενο.</label>
+                <label>
+            <input type="checkbox" name="option63" value="value63">7.4. Φαινόμενο Compton.</label>
+                <label>
+            <input type="checkbox" name="option64" value="value64">7.5. Η Κυματική Φύση της Ύλης.</label>
+                <label>
+            <input type="checkbox" name="option65" value="value65">7.6. Αρχή της Αβεβαιότητας.</label>
+                <label>
+            <input type="checkbox" name="option66" value="value66">7.7. Κυματοσυνάρτηση και εξίσωση Schrδdinger.</label> 
+        </form>
+                </p>
+            </details>
+
+</pre>
+
+        <hr>
+        <h4 style="color:rgb(44, 124, 151);">Χημεία</h4>
+        <hr>
+        <details>
+            <summary>Αναλυτικότερα:</summary>
+        <pre>
+            
+        &rarr; <mark><ins>Α' τεύχος</ins></mark>
+        <p><b><mark>Κεφάλαιο 1</mark>: ΔΙΑΜΟΡΙΑΚΕΣ ΔΥΝΑΜΕΙΣ-ΚΑΤΑΣΤΑΣΕΙΣ ΤΗΣ ΥΛΗΣ-ΠΡΟΣΘΕΤΙΚΕΣ ΙΔΙΟΤΗΤΕΣ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option67" value="value67">1.1. Διαμοριακές δυνάμεις – Μεταβολές καταστάσεων και ιδιότητες υγρών – Νόμος μερικών πιέσεων.</label>
+                <label>
+            <input type="checkbox" name="option68" value="value68">1.2. Προσθετικές ιδιότητες διαλυμάτων.</label>
+        </form></p>
+        
+        &rarr; <mark><ins>Β' τεύχος</ins></mark>
+        <p><b><mark>Κεφάλαιο 1</mark>: ΟΞΕΙΔΟΑΝΑΓΩΓΗ – ΗΛΕΚΤΡΟΛΥΣΗ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option69" value="value69">1.1. Αριθμός οξείδωσης. Οξείδωση – Αναγωγή.</label>
+                <label>
+            <input type="checkbox" name="option70" value="value70"> 1.2. Κυριότερα οξειδωτικά – αναγωγικά. Αντιδράσεις οξειδοαναγωγής.</label>
+        </form></p>
+        <p><b><mark>Κεφάλαιο 2</mark>: ΘΕΡΜΟΧΗΜΕΙΑ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option71" value="value71">2.1. Μεταβολή ενέργειας κατά τις χημικές μεταβολές. Ενδόθερμες- εξώθερμες αντιδράσεις. Θερμότητα αντίδρασης – ενθαλπία.</label>
+                <label>
+            <input type="checkbox" name="option72" value="value72">2.2. «Θερμιδομετρία – Νόμοι Θερμοχημείας».</label>
+        </form></p>
+        <p><b><mark>Κεφάλαιο 3</mark>: ΧΗΜΙΚΗ ΚΙΝΗΤΙΚΗ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option73" value="value73">3.1. Γενικά για τη χημική κινητική και τη χημική αντίδραση – Ταχύτητα αντίδρασης.</label>
+                <label>
+            <input type="checkbox" name="option74" value="value74">3.2. «Παράγοντες που επηρεάζουν την ταχύτητα αντίδρασης. Καταλύτες».</label>
+                <label>
+            <input type="checkbox" name="option75" value="value75">3.3. «Νόμος ταχύτητας – Μηχανισμός αντίδρασης».</label>
+        </form></p>
+        <p><b><mark>Κεφάλαιο 4</mark>: ΧΗΜΙΚΗ ΙΣΟΡΡΟΠΙΑ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option76" value="value76">4.1. «Έννοια χημικής ισορροπίας -Απόδοση αντίδρασης».</label>
+                <label>
+            <input type="checkbox" name="option77" value="value77">4.2. «Παράγοντες που επηρεάζουν τη θέση χημικής ισορροπίας -Αρχή Le Chatelier».</label>
+                <label>
+            <input type="checkbox" name="option78" value="value78">4.3. «Σταθερά χημικής ισορροπίας Kc – Κρ.».</label>
+        </form></p>
+        <p><b><mark>Κεφάλαιο 5</mark>: ΟΞΕΑ – ΒΑΣΕΙΣ ΚΑΙ ΙΟΝΤΙΚΗ ΙΣΟΡΡΟΠΙΑ</b>
+
+        <form>
+                <label>
+            <input type="checkbox" name="option79" value="value79">5.1. Οξέα – Βάσεις.</label>
+                <label>
+            <input type="checkbox" name="option80" value="value80">5.2. Ιοντισμός οξέων – βάσεων.</label>
+                <label>
+            <input type="checkbox" name="option81" value="value81">5.3. Ιοντισμός οξέων, βάσεων και νερού – pH.</label>
+                <label>
+            <input type="checkbox" name="option82" value="value82">5.4. Επίδραση κοινού ιόντος.</label>
+                <label>
+            <input type="checkbox" name="option83" value="value83">5.5. Ρυθμιστικά διαλύματα.</label>
+                <label>
+            <input type="checkbox" name="option84" value="value84">5.6. Δείκτες – ογκομέτρηση.</label>
+        </form></p>
+        <p></p><b><mark>Κεφάλαιο 6</mark>: ΗΛΕΚΤΡΟΝΙΑΚΗ ΔΟΜΗ ΤΩΝ ΑΤΟΜΩΝ & ΠΕΡΙΟΔΙΚΟΣ ΠΙΝΑΚΑΣ</b>
+
+         <form>
+                <label>
+            <input type="checkbox" name="option85" value="value85">6.1. Τροχιακό – Κβαντικοί αριθμοί.</label>
+                <label>
+            <input type="checkbox" name="option86" value="value86">6.2. Αρχές δόμησης πολυηλεκτρονικών ατόμων.</label>
+                <label>
+            <input type="checkbox" name="option87" value="value87">6.3. Δομή περιοδικού πίνακα (τομείς s,p,d,f) – Στοιχεία μετάπτωσης.</label>
+                <label>
+            <input type="checkbox" name="option88" value="value88">6.4. Μεταβολή ορισμένων περιοδικών ιδιοτήτων.</label>
+        </form></p>
+        <p><b><mark>Κεφάλαιο 7</mark>: ΟΡΓΑΝΙΚΗ ΧΗΜΕΙΑ</b>
+
+            <form>
+                <label>
+            <input type="checkbox" name="option89" value="value89">7.1. Δομή οργανικών ενώσεων – Διπλός και τριπλός δεσμός – Επαγωγικό φαινόμενο.</label>
+                <label>
+            <input type="checkbox" name="option90" value="value90">7.3. Κατηγορίες οργανικών αντιδράσεων και μερικοί μηχανισμοί οργανικών αντιδράσεων.</label>
+        </form> </p></details>
+
+        <hr><h5 style="color:rgb(44, 124, 151);">Έκθεση</h5><hr>
+        <details>
+            <summary>Αναλυτικότερα:</summary>
+        <pre>
+         <form>
+               <label>
+            <input type="checkbox" name="option91" value="value91">Θεματικές ενότητες</label>
+               <label>
+            <input type="checkbox" name="option92" value="value92">Γραμματική</label>
+               <label>
+            <input type="checkbox" name="option93" value="value93">Λογοτεχνία</label>
+        </form></p>
+            </pre>
+            </details>
+    </main>
+    
+    </body>
+</html>
+            
